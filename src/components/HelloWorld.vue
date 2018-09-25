@@ -2,17 +2,14 @@
 <v-app>
   <v-container>
     <v-layout row wrap>
-      <v-flex xs3>
-        <v-card>text</v-card>
-      </v-flex>
-      <v-flex xs9>
-        <simple></simple>
-      </v-flex>
-      <v-flex xs12>
-        <geo></geo>
+      <v-flex>
+        <v-card>
+          <v-card-text>
+            <geo width="100%"></geo>
+          </v-card-text>
+        </v-card>
       </v-flex>
     </v-layout>
-    
   </v-container>
 </v-app>
 </template>
@@ -28,7 +25,6 @@ export default {
   },
   data () {
     return {
-      show: true,
       currentView: 'simple'
     }
   }
