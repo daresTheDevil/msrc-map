@@ -5,6 +5,7 @@
       <v-flex>
         <v-card>
           <v-card-header>Test</v-card-header>
+          <v-card-media>
           <l-map
           :zoom="zoom"
       :center="center"
@@ -15,6 +16,7 @@
       <l-geo-json
         :geojson="districts"></l-geo-json>
 </l-map>
+          </v-card-media>
         </v-card>
       </v-flex>
     </v-layout>

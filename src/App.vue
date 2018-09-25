@@ -5,6 +5,8 @@
       fixed
       app
       clipped
+      floating
+      width="200"
 >
       <v-list dense>
         <v-list-tile>
@@ -33,9 +35,22 @@
       <v-toolbar-title>MSRC Maps</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-      <v-btn flat>Home</v-btn>
-      <v-btn flat>Map</v-btn>
-      <v-btn flat>Link Three</v-btn>
+      <v-menu :nudge-width="100">
+        <v-toolbar-title slot="activator">
+          <span>Years</span>
+          <v-icon dark>arrow_drop_down</v-icon>
+        </v-toolbar-title>
+
+        <v-list>
+          <v-list-tile
+            v-for="item in items"
+            :key="item"
+            @click=""
+          >
+            <v-list-tile-title v-text="item"></v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
     </v-toolbar-items>
 </v-toolbar>
     <v-content>
@@ -52,7 +67,8 @@ export default {
   data () {
     return {
       drawer: true,
-      title: 'MSRC Maps'
+      title: 'MSRC Maps',
+      items: ['2018', '2017', '2016']
     }
   },
   name: 'App'
