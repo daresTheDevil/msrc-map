@@ -30,12 +30,12 @@ export default {
   data () {
     return {
       zoom: 13,
-      center: L.latLng(47.413220, -1.219482),
+      center: L.latLng(32.3057015, -90.076474),
       url: 'https://{s}.tile.osm.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      marker: L.latLng(47.413220, -1.219482),
+      marker: L.latLng(32.3057015, -90.076474),
       currentZoom: 13,
-      currentCenter: L.latLng(47.413220, -1.219482)
+      currentCenter: L.latLng(32.3057015, -90.076474)
     }
   },
   methods: {
